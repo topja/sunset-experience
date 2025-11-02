@@ -1,0 +1,264 @@
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+type Language = 'es' | 'en' | 'pt';
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
+}
+
+const translations = {
+  es: {
+    // Navigation
+    'nav.guide': 'Guía del Litoral',
+    'nav.friends': 'Sunset Friends',
+    'nav.contact': 'Contacto',
+    
+    // Hero
+    'hero.title': 'Bienvenido a Sunset Experience',
+    'hero.subtitle': 'Turismo sanador frente al mar chileno.',
+    'hero.description': 'Descubre experiencias que mezclan energía, gastronomía y conexión.',
+    'hero.exploreGuide': 'Explora la Guía del Litoral 🌊',
+    'hero.joinFriends': 'Únete a Sunset Friends 💛',
+    'hero.contact': 'Contáctanos por WhatsApp 📱',
+    
+    // Story
+    'story.title': 'Nuestra Historia',
+    'story.description': 'Somos Nicole y Top, dos viajeros sureños que encontramos en el litoral un lugar para sanar y compartir. Amamos el vino, la buena comida y las conversaciones que reconectan con la vida. Queremos que cada visitante sienta la calma, la alegría y la energía de este lugar mágico.',
+    
+    // Map
+    'map.title': 'Guía del Litoral Interactiva',
+    'map.beaches': 'Playas',
+    'map.food': 'Comida y Picadas',
+    'map.artisan': 'Artesanía y Cultura',
+    'map.shopping': 'Compras y Servicios',
+    'map.interests': 'Puntos de Interés',
+    
+    // Recommendations
+    'reco.title': 'Nuestros Imperdibles del Litoral 🌊',
+    'reco.cafe': 'Café Lucresio',
+    'reco.cafeDesc': 'Jugos naturales y crepes frente a la plaza.',
+    'reco.restaurant': 'Puerto Castilla',
+    'reco.restaurantDesc': 'Pescados, mariscos y vista al mar.',
+    'reco.beach': 'Playa El Caleuche',
+    'reco.beachDesc': 'Perfecta para caminar y ver el atardecer.',
+    'reco.artisan': 'Artesanía Local',
+    'reco.artisanDesc': 'Recuerdos hechos a mano.',
+    'reco.viewLocation': 'Ver Ubicación',
+    'reco.addRecommendation': 'Agregar mi recomendación 💬',
+    
+    // Partnerships
+    'partners.title': 'Convenios y Descuentos',
+    'partners.place': 'Lugar',
+    'partners.benefit': 'Beneficio',
+    'partners.type': 'Tipo',
+    'partners.cafe': 'Café Lucresio',
+    'partners.cafeBenefit': '10% en desayunos',
+    'partners.cafeType': 'Gastronomía',
+    'partners.restaurant': 'Puerto Castilla',
+    'partners.restaurantBenefit': 'Copa de vino gratis',
+    'partners.restaurantType': 'Restaurante',
+    'partners.artisan': 'Feria Isla Negra',
+    'partners.artisanBenefit': 'Descuento en artesanías',
+    'partners.artisanType': 'Cultura',
+    
+    // Friends
+    'friends.title': 'Únete a nuestra comunidad 🌅',
+    'friends.description': 'Los Sunset Friends son viajeros que vuelven, recomiendan y mantienen vivo el espíritu del litoral. Al unirte, recibirás descuentos, regalos y sorpresas exclusivas.',
+    'friends.level1': '🌊 Explorador del Litoral',
+    'friends.level2': '🌅 Amigo del Mar',
+    'friends.level3': '🌞 Guardián del Atardecer',
+    'friends.join': 'Únete ahora y recibe tu primer regalo 🎁',
+    
+    // Contact
+    'contact.title': 'Sigamos Conectados 💛',
+    'contact.whatsapp': 'WhatsApp directo',
+    'contact.email': 'Email',
+    'contact.location': 'El Tabo, Chile',
+    
+    // Form
+    'form.name': 'Nombre',
+    'form.country': 'País',
+    'form.recommendation': 'Tu recomendación',
+    'form.photo': 'Subir foto',
+    'form.submit': 'Enviar',
+    'form.thanks': 'Gracias por compartir tu experiencia. 🌅 Has ganado puntos en Sunset Friends.',
+  },
+  en: {
+    // Navigation
+    'nav.guide': 'Coastal Guide',
+    'nav.friends': 'Sunset Friends',
+    'nav.contact': 'Contact',
+    
+    // Hero
+    'hero.title': 'Welcome to Sunset Experience',
+    'hero.subtitle': 'Healing tourism by the Chilean sea.',
+    'hero.description': 'Discover experiences that blend energy, gastronomy, and connection.',
+    'hero.exploreGuide': 'Explore the Coastal Guide 🌊',
+    'hero.joinFriends': 'Join Sunset Friends 💛',
+    'hero.contact': 'Contact us via WhatsApp 📱',
+    
+    // Story
+    'story.title': 'Our Story',
+    'story.description': 'We are Nicole and Top, two southern travelers who found a place to heal and share by the coast. We love wine, good food, and conversations that reconnect with life. We want every visitor to feel the calm, joy, and energy of this magical place.',
+    
+    // Map
+    'map.title': 'Interactive Coastal Guide',
+    'map.beaches': 'Beaches',
+    'map.food': 'Food & Eateries',
+    'map.artisan': 'Crafts & Culture',
+    'map.shopping': 'Shopping & Services',
+    'map.interests': 'Points of Interest',
+    
+    // Recommendations
+    'reco.title': 'Our Coastal Must-Sees 🌊',
+    'reco.cafe': 'Café Lucresio',
+    'reco.cafeDesc': 'Natural juices and crepes by the plaza.',
+    'reco.restaurant': 'Puerto Castilla',
+    'reco.restaurantDesc': 'Fish, seafood, and ocean views.',
+    'reco.beach': 'El Caleuche Beach',
+    'reco.beachDesc': 'Perfect for walks and sunsets.',
+    'reco.artisan': 'Local Crafts',
+    'reco.artisanDesc': 'Handmade souvenirs.',
+    'reco.viewLocation': 'View Location',
+    'reco.addRecommendation': 'Add my recommendation 💬',
+    
+    // Partnerships
+    'partners.title': 'Partnerships & Discounts',
+    'partners.place': 'Place',
+    'partners.benefit': 'Benefit',
+    'partners.type': 'Type',
+    'partners.cafe': 'Café Lucresio',
+    'partners.cafeBenefit': '10% off breakfasts',
+    'partners.cafeType': 'Gastronomy',
+    'partners.restaurant': 'Puerto Castilla',
+    'partners.restaurantBenefit': 'Free glass of wine',
+    'partners.restaurantType': 'Restaurant',
+    'partners.artisan': 'Isla Negra Fair',
+    'partners.artisanBenefit': 'Craft discount',
+    'partners.artisanType': 'Culture',
+    
+    // Friends
+    'friends.title': 'Join our community 🌅',
+    'friends.description': 'Sunset Friends are travelers who return, recommend, and keep the coastal spirit alive. By joining, you\'ll receive discounts, gifts, and exclusive surprises.',
+    'friends.level1': '🌊 Coastal Explorer',
+    'friends.level2': '🌅 Friend of the Sea',
+    'friends.level3': '🌞 Sunset Guardian',
+    'friends.join': 'Join now and receive your first gift 🎁',
+    
+    // Contact
+    'contact.title': 'Stay Connected 💛',
+    'contact.whatsapp': 'Direct WhatsApp',
+    'contact.email': 'Email',
+    'contact.location': 'El Tabo, Chile',
+    
+    // Form
+    'form.name': 'Name',
+    'form.country': 'Country',
+    'form.recommendation': 'Your recommendation',
+    'form.photo': 'Upload photo',
+    'form.submit': 'Submit',
+    'form.thanks': 'Thank you for sharing your experience. 🌅 You\'ve earned Sunset Friends points.',
+  },
+  pt: {
+    // Navigation
+    'nav.guide': 'Guia do Litoral',
+    'nav.friends': 'Sunset Friends',
+    'nav.contact': 'Contato',
+    
+    // Hero
+    'hero.title': 'Bem-vindo à Sunset Experience',
+    'hero.subtitle': 'Turismo de cura à beira-mar chileno.',
+    'hero.description': 'Descubra experiências que combinam energia, gastronomia e conexão.',
+    'hero.exploreGuide': 'Explore o Guia do Litoral 🌊',
+    'hero.joinFriends': 'Junte-se aos Sunset Friends 💛',
+    'hero.contact': 'Contacte-nos via WhatsApp 📱',
+    
+    // Story
+    'story.title': 'Nossa História',
+    'story.description': 'Somos Nicole e Top, dois viajantes do sul que encontramos no litoral um lugar para curar e compartilhar. Amamos vinho, boa comida e conversas que reconectam com a vida. Queremos que cada visitante sinta a calma, a alegria e a energia deste lugar mágico.',
+    
+    // Map
+    'map.title': 'Guia Interativo do Litoral',
+    'map.beaches': 'Praias',
+    'map.food': 'Comida e Restaurantes',
+    'map.artisan': 'Artesanato e Cultura',
+    'map.shopping': 'Compras e Serviços',
+    'map.interests': 'Pontos de Interesse',
+    
+    // Recommendations
+    'reco.title': 'Nossos Imperdíveis do Litoral 🌊',
+    'reco.cafe': 'Café Lucresio',
+    'reco.cafeDesc': 'Sucos naturais e crepes na praça.',
+    'reco.restaurant': 'Puerto Castilla',
+    'reco.restaurantDesc': 'Peixes, frutos do mar e vista para o mar.',
+    'reco.beach': 'Praia El Caleuche',
+    'reco.beachDesc': 'Perfeita para caminhar e ver o pôr do sol.',
+    'reco.artisan': 'Artesanato Local',
+    'reco.artisanDesc': 'Lembranças feitas à mão.',
+    'reco.viewLocation': 'Ver Localização',
+    'reco.addRecommendation': 'Adicionar minha recomendação 💬',
+    
+    // Partnerships
+    'partners.title': 'Parcerias e Descontos',
+    'partners.place': 'Lugar',
+    'partners.benefit': 'Benefício',
+    'partners.type': 'Tipo',
+    'partners.cafe': 'Café Lucresio',
+    'partners.cafeBenefit': '10% de desconto nos cafés da manhã',
+    'partners.cafeType': 'Gastronomia',
+    'partners.restaurant': 'Puerto Castilla',
+    'partners.restaurantBenefit': 'Taça de vinho grátis',
+    'partners.restaurantType': 'Restaurante',
+    'partners.artisan': 'Feira Isla Negra',
+    'partners.artisanBenefit': 'Desconto em artesanato',
+    'partners.artisanType': 'Cultura',
+    
+    // Friends
+    'friends.title': 'Junte-se à nossa comunidade 🌅',
+    'friends.description': 'Os Sunset Friends são viajantes que retornam, recomendam e mantêm vivo o espírito do litoral. Ao se juntar, você receberá descontos, presentes e surpresas exclusivas.',
+    'friends.level1': '🌊 Explorador do Litoral',
+    'friends.level2': '🌅 Amigo do Mar',
+    'friends.level3': '🌞 Guardião do Pôr do Sol',
+    'friends.join': 'Junte-se agora e receba seu primeiro presente 🎁',
+    
+    // Contact
+    'contact.title': 'Fique Conectado 💛',
+    'contact.whatsapp': 'WhatsApp direto',
+    'contact.email': 'Email',
+    'contact.location': 'El Tabo, Chile',
+    
+    // Form
+    'form.name': 'Nome',
+    'form.country': 'País',
+    'form.recommendation': 'Sua recomendação',
+    'form.photo': 'Enviar foto',
+    'form.submit': 'Enviar',
+    'form.thanks': 'Obrigado por compartilhar sua experiência. 🌅 Você ganhou pontos no Sunset Friends.',
+  },
+};
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const [language, setLanguage] = useState<Language>('es');
+
+  const t = (key: string): string => {
+    return translations[language][key as keyof typeof translations['es']] || key;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
