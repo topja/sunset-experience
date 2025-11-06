@@ -43,7 +43,7 @@ const MapSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('beaches');
 
   return (
-    <section className="py-20 bg-secondary/10">
+    <section id="guide" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-center text-foreground animate-fade-in">

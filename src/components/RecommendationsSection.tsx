@@ -38,7 +38,7 @@ const RecommendationsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="guide" className="py-20 bg-background">
+    <section id="recommendations" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-center text-foreground mb-12 animate-fade-in">
           {t('reco.title')}
