@@ -2,10 +2,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { MapPin } from 'lucide-react';
-import cafeImage from '@/assets/cafe-image.jpg';
-import restaurantImage from '@/assets/restaurant-image.jpg';
-import beachImage from '@/assets/beach-image.jpg';
-import artisanImage from '@/assets/artisan-image.jpg';
+import cafeImage from '@/assets/cafe-lucrecio.jpg';
+import restaurantImage from '@/assets/puerto-castilla.jpg';
+import kaleucheImage from '@/assets/kaleuche-restaurant.jpg';
+import plazaImage from '@/assets/plaza-y-el-mar.jpg';
 
 const recommendations = [
   {
@@ -21,16 +21,16 @@ const recommendations = [
     mapsUrl: 'https://maps.google.com/?q=Puerto+Castilla+El+Tabo',
   },
   {
-    titleKey: 'reco.beach',
-    descKey: 'reco.beachDesc',
-    image: beachImage,
-    mapsUrl: 'https://maps.google.com/?q=Playa+El+Caleuche+Chile',
+    titleKey: 'reco.kaleuche',
+    descKey: 'reco.kaleucheDesc',
+    image: kaleucheImage,
+    mapsUrl: 'https://maps.google.com/?q=Restaurante+El+Kaleuche+Chile',
   },
   {
-    titleKey: 'reco.artisan',
-    descKey: 'reco.artisanDesc',
-    image: artisanImage,
-    mapsUrl: 'https://maps.google.com/?q=Feria+Artesanal+Isla+Negra',
+    titleKey: 'reco.plaza',
+    descKey: 'reco.plazaDesc',
+    image: plazaImage,
+    mapsUrl: 'https://maps.google.com/?q=Plaza+y+el+Mar+Restaurant+Chile',
   },
 ];
 
