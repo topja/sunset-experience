@@ -45,12 +45,13 @@ const ContactSection = () => {
                 <h3 className="font-heading font-semibold text-foreground">
                   {t('contact.email')}
                 </h3>
-                <a
-                  href="mailto:hola@sunsetexperience.cl"
-                  className="text-primary hover:underline"
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => window.location.href = 'mailto:inversioneselatardecer@gmail.com'}
                 >
-                  hola@sunsetexperience.cl
-                </a>
+                  Email
+                </Button>
               </CardContent>
             </Card>
 
