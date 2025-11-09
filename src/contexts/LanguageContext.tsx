@@ -75,7 +75,7 @@ const translations = {
     'contact.title': 'Sigamos Conectados 💛',
     'contact.whatsapp': 'WhatsApp directo',
     'contact.email': 'Email',
-    'contact.location': 'El Tabo, Chile',
+    'contact.instagram': 'Instagram',
     
     // Form
     'form.name': 'Nombre',
@@ -151,7 +151,7 @@ const translations = {
     'contact.title': 'Stay Connected 💛',
     'contact.whatsapp': 'Direct WhatsApp',
     'contact.email': 'Email',
-    'contact.location': 'El Tabo, Chile',
+    'contact.instagram': 'Instagram',
     
     // Form
     'form.name': 'Name',
@@ -227,7 +227,7 @@ const translations = {
     'contact.title': 'Fique Conectado 💛',
     'contact.whatsapp': 'WhatsApp direto',
     'contact.email': 'Email',
-    'contact.location': 'El Tabo, Chile',
+    'contact.instagram': 'Instagram',
     
     // Form
     'form.name': 'Nome',

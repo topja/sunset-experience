@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
-import { MapPin, Mail, MessageCircle } from 'lucide-react';
+import { Instagram, Mail, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 
 const ContactSection = () => {
@@ -58,12 +58,18 @@ const ContactSection = () => {
             <Card className="shadow-soft hover:shadow-glow transition-smooth group">
               <CardContent className="p-8 text-center space-y-4">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-smooth">
-                  <MapPin className="w-8 h-8 text-primary" />
+                  <Instagram className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground">
-                  {t('contact.location')}
+                  {t('contact.instagram')}
                 </h3>
-                <p className="text-muted-foreground">El Tabo, Chile</p>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => window.open('https://www.instagram.com/sunsetexperiencechile/', '_blank')}
+                >
+                  Instagram
+                </Button>
               </CardContent>
             </Card>
           </div>
