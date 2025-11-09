@@ -29,23 +29,6 @@ const FriendsSection = () => {
             {t('friends.description')}
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-6 mt-12">
-            {levels.map((level, index) => (
-              <Card
-                key={index}
-                className="bg-white/95 backdrop-blur-sm shadow-glow hover:scale-105 transition-smooth animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-4">{level.split(' ')[0]}</div>
-                  <p className="font-heading font-semibold text-foreground">
-                    {level.split(' ').slice(1).join(' ')}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
           <Button
             size="lg"
             onClick={handleJoin}

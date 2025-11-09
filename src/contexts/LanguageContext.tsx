@@ -64,12 +64,12 @@ const translations = {
     'partners.artisanType': 'Cultura',
     
     // Friends
-    'friends.title': 'Únete a nuestra comunidad 🌅',
-    'friends.description': 'Los Sunset Friends son viajeros que vuelven, recomiendan y mantienen vivo el espíritu del litoral. Al unirte, recibirás descuentos, regalos y sorpresas exclusivas.',
+    'friends.title': 'Iniciemos la Experiencia Sunset 🌅',
+    'friends.description': 'Bienvenido a Sunset Friends. Ahora que estás aquí, queremos que vivas el litoral de forma especial. Recibirás recomendaciones exclusivas, descuentos locales y sorpresas durante tu estadía.',
     'friends.level1': '🌊 Explorador del Litoral',
     'friends.level2': '🌅 Amigo del Mar',
     'friends.level3': '🌞 Guardián del Atardecer',
-    'friends.join': 'Únete ahora y recibe tu primer regalo 🎁',
+    'friends.join': 'Comenzar la Experiencia Sunset 🎁',
     
     // Contact
     'contact.title': 'Sigamos Conectados 💛',
@@ -140,12 +140,12 @@ const translations = {
     'partners.artisanType': 'Culture',
     
     // Friends
-    'friends.title': 'Join our community 🌅',
-    'friends.description': 'Sunset Friends are travelers who return, recommend, and keep the coastal spirit alive. By joining, you\'ll receive discounts, gifts, and exclusive surprises.',
+    'friends.title': 'Let\'s Start the Sunset Experience 🌅',
+    'friends.description': 'Welcome to Sunset Friends. Now that you\'re here, we want you to experience the coast in a special way. You\'ll receive exclusive recommendations, local discounts, and surprises during your stay.',
     'friends.level1': '🌊 Coastal Explorer',
     'friends.level2': '🌅 Friend of the Sea',
     'friends.level3': '🌞 Sunset Guardian',
-    'friends.join': 'Join now and receive your first gift 🎁',
+    'friends.join': 'Start the Sunset Experience 🎁',
     
     // Contact
     'contact.title': 'Stay Connected 💛',
@@ -216,12 +216,12 @@ const translations = {
     'partners.artisanType': 'Cultura',
     
     // Friends
-    'friends.title': 'Junte-se à nossa comunidade 🌅',
-    'friends.description': 'Os Sunset Friends são viajantes que retornam, recomendam e mantêm vivo o espírito do litoral. Ao se juntar, você receberá descontos, presentes e surpresas exclusivas.',
+    'friends.title': 'Vamos Começar a Experiência Sunset 🌅',
+    'friends.description': 'Bem-vindo aos Sunset Friends. Agora que você está aqui, queremos que você viva o litoral de forma especial. Você receberá recomendações exclusivas, descontos locais e surpresas durante sua estadia.',
     'friends.level1': '🌊 Explorador do Litoral',
     'friends.level2': '🌅 Amigo do Mar',
     'friends.level3': '🌞 Guardião do Pôr do Sol',
-    'friends.join': 'Junte-se agora e receba seu primeiro presente 🎁',
+    'friends.join': 'Começar a Experiência Sunset 🎁',
     
     // Contact
     'contact.title': 'Fique Conectado 💛',

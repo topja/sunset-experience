@@ -61,9 +61,8 @@ const HeroSection = () => {
             
             <Button
               size="lg"
-              variant="outline"
               onClick={handleWhatsApp}
-              className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth text-base sm:text-lg px-6 sm:px-8"
+              className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-foreground transition-smooth text-base sm:text-lg px-6 sm:px-8"
             >
               {t('hero.contact')}
             </Button>
