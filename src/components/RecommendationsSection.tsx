@@ -83,7 +83,7 @@ const RecommendationsSection = () => {
                   variant="outline"
                   size="sm"
                   className="w-full"
-                  onClick={() => window.open('https://wa.me/56912345678?text=Hola! Me interesa conocer más sobre ' + t(exp.titleKey), '_blank')}
+                  onClick={() => window.open('https://wa.me/56988315390?text=Hola! Me interesa conocer más sobre ' + t(exp.titleKey), '_blank')}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {t('exp.bookNow')}
