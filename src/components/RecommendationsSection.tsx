@@ -1,36 +1,40 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
-import { MapPin } from 'lucide-react';
-import cafeImage from '@/assets/cafe-lucrecio.jpg';
-import restaurantImage from '@/assets/puerto-castilla.jpg';
-import kaleucheImage from '@/assets/kaleuche-restaurant.jpg';
-import plazaImage from '@/assets/plaza-y-el-mar.jpg';
+import { MessageCircle } from 'lucide-react';
+import sanadoraImage from '@/assets/experiencia-sanadora.jpg';
+import saboresImage from '@/assets/sabores-pacifico.jpg';
+import nerudaImage from '@/assets/tour-neruda.jpg';
+import vinasImage from '@/assets/vinas-litoral.jpg';
 
-const recommendations = [
+const experiences = [
   {
-    titleKey: 'reco.cafe',
-    descKey: 'reco.cafeDesc',
-    image: cafeImage,
-    mapsUrl: 'https://maps.google.com/?q=Cafe+Lucresio+El+Tabo',
+    titleKey: 'exp.sanadora',
+    descKey: 'exp.sanadoraDesc',
+    image: sanadoraImage,
+    duration: '3-4h',
+    price: 'USD 95',
   },
   {
-    titleKey: 'reco.restaurant',
-    descKey: 'reco.restaurantDesc',
-    image: restaurantImage,
-    mapsUrl: 'https://maps.google.com/?q=Puerto+Castilla+El+Tabo',
+    titleKey: 'exp.sabores',
+    descKey: 'exp.saboresDesc',
+    image: saboresImage,
+    duration: '3-4h',
+    price: 'USD 80',
   },
   {
-    titleKey: 'reco.kaleuche',
-    descKey: 'reco.kaleucheDesc',
-    image: kaleucheImage,
-    mapsUrl: 'https://maps.google.com/?q=Restaurante+El+Kaleuche+Chile',
+    titleKey: 'exp.neruda',
+    descKey: 'exp.nerudaDesc',
+    image: nerudaImage,
+    duration: '4h',
+    price: 'USD 70',
   },
   {
-    titleKey: 'reco.plaza',
-    descKey: 'reco.plazaDesc',
-    image: plazaImage,
-    mapsUrl: 'https://maps.google.com/?q=Plaza+y+el+Mar+Restaurant+Chile',
+    titleKey: 'exp.vinas',
+    descKey: 'exp.vinasDesc',
+    image: vinasImage,
+    duration: '4-5h',
+    price: 'USD 95',
   },
 ];
 
@@ -40,12 +44,15 @@ const RecommendationsSection = () => {
   return (
     <section id="recommendations" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-center text-foreground mb-12 animate-fade-in">
-          {t('reco.title')}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-center text-foreground mb-4 animate-fade-in">
+          {t('exp.title')}
         </h2>
+        <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 animate-fade-in">
+          {t('exp.subtitle')}
+        </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {recommendations.map((reco, index) => (
+          {experiences.map((exp, index) => (
             <Card
               key={index}
               className="overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group"
@@ -53,25 +60,33 @@ const RecommendationsSection = () => {
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={reco.image}
-                  alt={t(reco.titleKey)}
+                  src={exp.image}
+                  alt={t(exp.titleKey)}
                   className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 flex gap-2">
+                  <span className="bg-white/90 text-foreground text-xs font-semibold px-2 py-1 rounded">
+                    {exp.duration}
+                  </span>
+                  <span className="bg-primary/90 text-primary-foreground text-xs font-semibold px-2 py-1 rounded">
+                    {exp.price}
+                  </span>
+                </div>
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-heading font-semibold text-foreground">
-                  {t(reco.titleKey)}
+                  {t(exp.titleKey)}
                 </h3>
-                <p className="text-muted-foreground">{t(reco.descKey)}</p>
+                <p className="text-muted-foreground text-sm">{t(exp.descKey)}</p>
                 <Button
                   variant="outline"
                   size="sm"
                   className="w-full"
-                  onClick={() => window.open(reco.mapsUrl, '_blank')}
+                  onClick={() => window.open('https://wa.me/56912345678?text=Hola! Me interesa conocer más sobre ' + t(exp.titleKey), '_blank')}
                 >
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {t('reco.viewLocation')}
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  {t('exp.bookNow')}
                 </Button>
               </CardContent>
             </Card>
@@ -87,7 +102,7 @@ const RecommendationsSection = () => {
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            {t('reco.addRecommendation')}
+            {t('exp.moreInfo')}
           </Button>
         </div>
       </div>
