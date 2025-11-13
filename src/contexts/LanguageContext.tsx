@@ -35,18 +35,19 @@ const translations = {
     'map.shopping': 'Compras y Servicios',
     'map.interests': 'Puntos de Interés',
     
-    // Recommendations
-    'reco.title': 'Nuestros Imperdibles del Litoral 🌊',
-    'reco.cafe': 'Café Lucrecio',
-    'reco.cafeDesc': 'Jugos naturales y crepes frente a la plaza.',
-    'reco.restaurant': 'Puerto Castilla',
-    'reco.restaurantDesc': 'Pescados, mariscos y vista al mar.',
-    'reco.kaleuche': 'Restaurante El Kaleuche',
-    'reco.kaleucheDesc': 'Gastronomía frente al mar con atardeceres únicos.',
-    'reco.plaza': 'Plaza y el Mar',
-    'reco.plazaDesc': 'Cocina chilena con vista a la plaza y el océano.',
-    'reco.viewLocation': 'Ver Ubicación',
-    'reco.addRecommendation': 'Agregar mi recomendación 💬',
+    // Experiences
+    'exp.title': 'Nuestras Imperdibles Experiencias 🌅',
+    'exp.subtitle': 'En Sunset Experience creemos que sanar, disfrutar y compartir son parte del mismo viaje.',
+    'exp.sanadora': 'Experiencia Sanadora del Litoral',
+    'exp.sanadoraDesc': 'Biomagnetismo, meditación frente al mar y degustación de mariscos con vino chileno.',
+    'exp.sabores': 'Sabores del Pacífico',
+    'exp.saboresDesc': 'Tour gastronómico con preparación de empanadas, almejas a la parmesana y música en vivo.',
+    'exp.neruda': 'Tras las Huellas de Pablo Neruda',
+    'exp.nerudaDesc': 'Visita a su casa-museo en Isla Negra y ruta por las mejores picadas del litoral.',
+    'exp.vinas': 'Viñas del Litoral',
+    'exp.vinasDesc': 'Tour del vino chileno en viñas boutique del Valle de Casablanca o San Antonio.',
+    'exp.bookNow': 'Reservar Ahora',
+    'exp.moreInfo': 'Más información sobre experiencias',
     
     // Partnerships
     'partners.title': 'Convenios y Descuentos',
