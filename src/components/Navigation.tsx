@@ -35,12 +35,6 @@ const Navigation = () => {
               {t('nav.guide')}
             </button>
             <button
-              onClick={() => scrollToSection('friends')}
-              className="text-foreground hover:text-primary transition-smooth"
-            >
-              {t('nav.friends')}
-            </button>
-            <button
               onClick={() => scrollToSection('contact')}
               className="text-foreground hover:text-primary transition-smooth"
             >
@@ -100,12 +94,6 @@ const Navigation = () => {
                 className="text-foreground hover:text-primary transition-smooth text-left"
               >
                 {t('nav.guide')}
-              </button>
-              <button
-                onClick={() => scrollToSection('friends')}
-                className="text-foreground hover:text-primary transition-smooth text-left"
-              >
-                {t('nav.friends')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
