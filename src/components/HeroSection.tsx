@@ -52,15 +52,6 @@ const HeroSection = () => {
             
             <Button
               size="lg"
-              variant="secondary"
-              onClick={() => scrollToSection('friends')}
-              className="text-base sm:text-lg px-6 sm:px-8 transition-smooth"
-            >
-              {t('hero.joinFriends')}
-            </Button>
-            
-            <Button
-              size="lg"
               onClick={handleWhatsApp}
               className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-foreground transition-smooth text-base sm:text-lg px-6 sm:px-8"
             >
