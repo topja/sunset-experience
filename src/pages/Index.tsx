@@ -7,6 +7,7 @@ import RecommendationsSection from '@/components/RecommendationsSection';
 import PartnershipsSection from '@/components/PartnershipsSection';
 import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import DiscountPopup from '@/components/DiscountPopup';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <PartnershipsSection />
         <ContactSection />
         <WhatsAppButton />
+        <DiscountPopup />
         
         {/* Footer */}
         <footer className="bg-foreground text-background py-8">
