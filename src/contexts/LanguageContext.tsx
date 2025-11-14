@@ -49,6 +49,12 @@ const translations = {
     'exp.bookNow': 'Reservar Ahora',
     'exp.moreInfo': 'Más información sobre experiencias',
     
+    // Popup
+    'popup.title': '¡Bienvenido a Sunset Experience! 🌅',
+    'popup.message': 'Tienes un 15% de descuento en tu primera experiencia',
+    'popup.cta': 'Ver Experiencias',
+    'popup.close': 'Cerrar',
+    
     // Partnerships
     'partners.title': 'Convenios y Descuentos',
     'partners.place': 'Lugar',
@@ -111,6 +117,26 @@ const translations = {
     'map.artisan': 'Crafts & Culture',
     'map.shopping': 'Shopping & Services',
     'map.interests': 'Points of Interest',
+    
+    // Experiences
+    'exp.title': 'Our Must-Have Experiences 🌅',
+    'exp.subtitle': 'At Sunset Experience we believe that healing, enjoying, and sharing are part of the same journey.',
+    'exp.sanadora': 'Healing Coastal Journey',
+    'exp.sanadoraDesc': 'Biomagnetism, ocean meditation, and seafood tasting with Chilean wine.',
+    'exp.sabores': 'Pacific Flavors',
+    'exp.saboresDesc': 'Gastronomic tour with empanada making, parmesan clams, and live music.',
+    'exp.neruda': 'Following Neruda\'s Steps',
+    'exp.nerudaDesc': 'Visit his museum house in Isla Negra and route through the best coastal spots.',
+    'exp.vinas': 'Coastal Vineyards',
+    'exp.vinasDesc': 'Chilean wine tour in boutique vineyards of Casablanca or San Antonio Valley.',
+    'exp.bookNow': 'Book Now',
+    'exp.moreInfo': 'More information about experiences',
+    
+    // Popup
+    'popup.title': 'Welcome to Sunset Experience! 🌅',
+    'popup.message': 'Get 15% off your first experience',
+    'popup.cta': 'View Experiences',
+    'popup.close': 'Close',
     
     // Recommendations
     'reco.title': 'Our Coastal Must-Sees 🌊',
@@ -187,6 +213,26 @@ const translations = {
     'map.artisan': 'Artesanato e Cultura',
     'map.shopping': 'Compras e Serviços',
     'map.interests': 'Pontos de Interesse',
+    
+    // Experiences
+    'exp.title': 'Nossas Experiências Imperdíveis 🌅',
+    'exp.subtitle': 'Na Sunset Experience acreditamos que curar, aproveitar e compartilhar fazem parte da mesma jornada.',
+    'exp.sanadora': 'Experiência Curativa do Litoral',
+    'exp.sanadoraDesc': 'Biomagnetismo, meditação no oceano e degustação de frutos do mar com vinho chileno.',
+    'exp.sabores': 'Sabores do Pacífico',
+    'exp.saboresDesc': 'Tour gastronômico com preparação de empanadas, amêijoas à parmesana e música ao vivo.',
+    'exp.neruda': 'Seguindo os Passos de Neruda',
+    'exp.nerudaDesc': 'Visite sua casa-museu em Isla Negra e percorra os melhores pontos do litoral.',
+    'exp.vinas': 'Vinhedos do Litoral',
+    'exp.vinasDesc': 'Tour do vinho chileno em vinícolas boutique do Vale de Casablanca ou San Antonio.',
+    'exp.bookNow': 'Reservar Agora',
+    'exp.moreInfo': 'Mais informações sobre experiências',
+    
+    // Popup
+    'popup.title': 'Bem-vindo à Sunset Experience! 🌅',
+    'popup.message': 'Ganhe 15% de desconto na sua primeira experiência',
+    'popup.cta': 'Ver Experiências',
+    'popup.close': 'Fechar',
     
     // Recommendations
     'reco.title': 'Nossos Imperdíveis do Litoral 🌊',

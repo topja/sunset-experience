@@ -104,19 +104,6 @@ const MapSection = () => {
             ))}
           </div>
 
-          {/* Map Embed */}
-          <div className="mt-12 rounded-2xl overflow-hidden shadow-glow animate-fade-in">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26483.90859473845!2d-71.65799449999999!3d-33.45946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c57c4d0a5d8b%3A0x8a9a5a3b6b0a8b0a!2sEl%20Tabo%2C%20Chile!5e0!3m2!1sen!2s!4v1234567890"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mapa del Litoral"
-            />
-          </div>
         </div>
       </div>
     </section>
