@@ -4,6 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import StorySection from '@/components/StorySection';
 import MapSection from '@/components/MapSection';
 import RecommendationsSection from '@/components/RecommendationsSection';
+import ReviewsSection from '@/components/ReviewsSection';
+import StaysSection from '@/components/StaysSection';
 import PartnershipsSection from '@/components/PartnershipsSection';
 import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -16,8 +18,10 @@ const Index = () => {
         <Navigation />
         <HeroSection />
         <StorySection />
+        <ReviewsSection />
         <MapSection />
         <RecommendationsSection />
+        <StaysSection />
         <PartnershipsSection />
         <ContactSection />
         <WhatsAppButton />
@@ -27,7 +31,7 @@ const Index = () => {
         <footer className="bg-foreground text-background py-8">
           <div className="container mx-auto px-4 text-center">
             <p className="text-sm">
-              © 2025 Sunset Experience. El Tabo, Chile. 🌅
+              © {new Date().getFullYear()} Sunset Experience. El Tabo, Chile. 🌅
             </p>
           </div>
         </footer>

@@ -1,16 +1,20 @@
 import { Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import hostsImage from '@/assets/hosts-image.jpg';
+import nicolePhoto from '@/assets/nicole.jpg';
+import topPhoto from '@/assets/top.jpg';
 
 const hosts = [
   {
     name: 'Nicole Vilches',
+    photo: nicolePhoto,
     roleKey: 'story.nicoleRole',
     loveKey: 'story.nicoleLove',
     linkedin: 'https://www.linkedin.com/in/nicole-lisette-vilches-amigo-5a5b53a5/',
   },
   {
     name: 'Tophandd Caro',
+    photo: topPhoto,
     roleKey: 'story.topRole',
     loveKey: 'story.topLove',
     linkedin: 'https://www.linkedin.com/in/tophandd-caro-fuentes-86561159/',
@@ -54,9 +58,17 @@ const StorySection = () => {
               key={host.name}
               className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-glow transition-smooth flex flex-col gap-3"
             >
-              <div>
-                <h3 className="text-xl font-heading font-semibold text-foreground">{host.name}</h3>
-                <p className="text-sm font-medium text-primary">{t(host.roleKey)}</p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={host.photo}
+                  alt={host.name}
+                  loading="lazy"
+                  className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/30 shrink-0"
+                />
+                <div>
+                  <h3 className="text-xl font-heading font-semibold text-foreground">{host.name}</h3>
+                  <p className="text-sm font-medium text-primary">{t(host.roleKey)}</p>
+                </div>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-1">{t(host.loveKey)}</p>
               <a
