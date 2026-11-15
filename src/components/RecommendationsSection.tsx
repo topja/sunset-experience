@@ -6,11 +6,13 @@ import { useEffect, useState } from 'react';
 import lunchImage from '@/assets/almuerzo-amigos.jpg';
 import sunsetTerraza from '@/assets/sunset-terraza.jpg';
 import sunsetMar from '@/assets/sunset-mar.jpg';
+import sunsetAmigos from '@/assets/sunset-amigos.jpg';
+import sunsetFamilia from '@/assets/sunset-familia.jpg';
 import comboImage from '@/assets/hosts-image.jpg';
 
 const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchImage], duration: '13:00 – 16:00' },
-  { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetMar], duration: '19:30 – 21:30' },
+  { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetMar, sunsetAmigos], duration: '19:30 – 21:30' },
   { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboImage], duration: '13:00 – 21:30', featured: true },
 ];
 
