@@ -28,4 +28,4 @@ npm run dev      # abre http://localhost:8080
 
 ## Dominio propio
 
-Crear el archivo `public/CNAME` con el dominio (ej. `sunsetexperience.cl`) y apuntar los DNS del dominio a GitHub Pages. El workflow detecta el CNAME y compila para la raíz del dominio.
+El sitio vive en **https://sunsetexperience.cl** (archivo `public/CNAME`). DNS: NIC Chile → Cloudflare (carol/dimitris.ns.cloudflare.com) → GitHub Pages (4 registros A 185.199.108-111.153 + CNAME www → topja.github.io, sin proxy). El workflow detecta el CNAME y compila para la raíz del dominio.
