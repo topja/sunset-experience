@@ -1,73 +1,31 @@
-# Welcome to your Lovable project
+# Sunset Experience 🌅
 
-## Project info
+Sitio web de Sunset Experience — turismo sanador y guía del Litoral de los Poetas (El Tabo, Isla Negra, Las Cruces).
 
-**URL**: https://lovable.dev/projects/9726ee02-a791-467e-afa3-4234aa18d9d4
+Hecho con Vite + React + TypeScript + Tailwind (shadcn/ui). Publicado con **GitHub Pages**: cada cambio que se sube a la rama `main` se compila y publica solo (pestaña **Actions**).
 
-## How can I edit this code?
+> El proyecto nació en Lovable y se desconectó el 15-11-2026. Desde entonces se edita solo aquí.
 
-There are several ways of editing your application.
+## Dónde está cada cosa
 
-**Use Lovable**
+| Qué cambiar | Dónde |
+|---|---|
+| Textos en ES / EN / PT | `src/contexts/LanguageContext.tsx` |
+| Secciones de la página | `src/components/` |
+| Fotos | `src/assets/` |
+| Colores y tipografía | `src/index.css` y `tailwind.config.ts` |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9726ee02-a791-467e-afa3-4234aa18d9d4) and start prompting.
+## Trabajar en tu computador
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requiere Node.js 20+.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/topja/sunset-experience.git
+cd sunset-experience
+npm install
+npm run dev      # abre http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+## Dominio propio
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9726ee02-a791-467e-afa3-4234aa18d9d4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Crear el archivo `public/CNAME` con el dominio (ej. `sunsetexperience.cl`) y apuntar los DNS del dominio a GitHub Pages. El workflow detecta el CNAME y compila para la raíz del dominio.
