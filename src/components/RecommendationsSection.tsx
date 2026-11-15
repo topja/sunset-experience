@@ -1,16 +1,73 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
-import { MessageCircle } from 'lucide-react';
-import lunchImage from '@/assets/sabores-pacifico.jpg';
-import sunsetImage from '@/assets/sunset-terraza.jpg';
+import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import lunchImage from '@/assets/almuerzo-amigos.jpg';
+import sunsetTerraza from '@/assets/sunset-terraza.jpg';
+import sunsetMar from '@/assets/sunset-mar.jpg';
 import comboImage from '@/assets/hosts-image.jpg';
 
 const experiences = [
-  { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', image: lunchImage, duration: '13:00 – 16:00' },
-  { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', image: sunsetImage, duration: '19:30 – 21:30' },
-  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', image: comboImage, duration: '13:00 – 21:30', featured: true },
+  { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchImage], duration: '13:00 – 16:00' },
+  { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetMar], duration: '19:30 – 21:30' },
+  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboImage], duration: '13:00 – 21:30', featured: true },
 ];
+
+// Fotos de cada experiencia: para agregar más, súmalas al arreglo "images".
+const PhotoCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [i, setI] = useState(0);
+  const n = images.length;
+  useEffect(() => {
+    if (n < 2) return;
+    const id = setInterval(() => setI((x) => (x + 1) % n), 4000);
+    return () => clearInterval(id);
+  }, [n]);
+  return (
+    <>
+      {images.map((src, k) => (
+        <img
+          key={src}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:scale-110 ${k === i ? 'opacity-100' : 'opacity-0'}`}
+        />
+      ))}
+      {n > 1 && (
+        <>
+          <button
+            type="button"
+            aria-label="Foto anterior"
+            onClick={() => setI((i - 1 + n) % n)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-1 hover:bg-white"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button
+            type="button"
+            aria-label="Foto siguiente"
+            onClick={() => setI((i + 1) % n)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-1 hover:bg-white"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+          <div className="absolute bottom-3 right-3 z-10 flex gap-1.5">
+            {images.map((_, k) => (
+              <button
+                key={k}
+                type="button"
+                aria-label={`Foto ${k + 1}`}
+                onClick={() => setI(k)}
+                className={`h-2 rounded-full transition-all ${k === i ? 'w-4 bg-white' : 'w-2 bg-white/60'}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
+};
 
 const RecommendationsSection = () => {
   const { t } = useLanguage();
@@ -32,12 +89,8 @@ const RecommendationsSection = () => {
               className={`overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group flex flex-col ${exp.featured ? 'ring-2 ring-primary' : ''}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={exp.image}
-                  alt={t(exp.titleKey)}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
-                />
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <PhotoCarousel images={exp.images} alt={t(exp.titleKey)} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 {exp.featured && (
                   <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
