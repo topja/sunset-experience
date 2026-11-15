@@ -3,7 +3,7 @@ import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { MessageCircle } from 'lucide-react';
 import lunchImage from '@/assets/sabores-pacifico.jpg';
-import sunsetImage from '@/assets/hero-sunset.jpg';
+import sunsetImage from '@/assets/sunset-terraza.jpg';
 import comboImage from '@/assets/hosts-image.jpg';
 
 const experiences = [
