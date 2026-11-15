@@ -26,6 +26,12 @@ const translations = {
     // Story
     'story.title': 'Nuestra Historia',
     'story.description': 'Somos Nicole y Top, dos viajeros sureños que encontramos en el litoral un lugar para sanar y compartir. Amamos el vino, la buena comida y las conversaciones que reconectan con la vida. Queremos que cada visitante sienta la calma, la alegría y la energía de este lugar mágico.',
+    'story.pro': 'Somos profesionales y apasionados por el turismo y la gastronomía. Entre semana trabajamos en lo nuestro; los fines de semana abrimos nuestra casa en El Quisco para compartir mariscos, vinos de la costa y atardeceres.',
+    'story.nicoleRole': 'Jefa de Retail Regional en Macro Food',
+    'story.nicoleLove': 'Product manager de profesión y Superanfitriona en Airbnb hace 7 años, apasionada por el turismo y la gastronomía.',
+    'story.topRole': 'Software Project Leader en Mercado Libre',
+    'story.topLove': 'Líder de proyectos de tecnología, apasionado por el turismo, la gastronomía y los atardeceres del litoral.',
+    'story.linkedin': 'Ver perfil en LinkedIn',
     
     // Map
     'map.title': 'Guía del Litoral Interactiva',
@@ -109,6 +115,12 @@ const translations = {
     // Story
     'story.title': 'Our Story',
     'story.description': 'We are Nicole and Top, two southern travelers who found a place to heal and share by the coast. We love wine, good food, and conversations that reconnect with life. We want every visitor to feel the calm, joy, and energy of this magical place.',
+    'story.pro': 'We are professionals with a passion for tourism and food. During the week we work in our fields; on weekends we open our home in El Quisco to share seafood, coastal wines and sunsets.',
+    'story.nicoleRole': 'Regional Retail Manager at Macro Food',
+    'story.nicoleLove': 'Product manager by trade and an Airbnb Superhost for 7 years, with a passion for tourism and food.',
+    'story.topRole': 'Software Project Leader at Mercado Libre',
+    'story.topLove': 'Tech project leader with a passion for tourism, food and coastal sunsets.',
+    'story.linkedin': 'View LinkedIn profile',
     
     // Map
     'map.title': 'Interactive Coastal Guide',
@@ -205,6 +217,12 @@ const translations = {
     // Story
     'story.title': 'Nossa História',
     'story.description': 'Somos Nicole e Top, dois viajantes do sul que encontramos no litoral um lugar para curar e compartilhar. Amamos vinho, boa comida e conversas que reconectam com a vida. Queremos que cada visitante sinta a calma, a alegria e a energia deste lugar mágico.',
+    'story.pro': 'Somos profissionais apaixonados por turismo e gastronomia. Durante a semana trabalhamos em nossas áreas; nos fins de semana abrimos nossa casa em El Quisco para compartilhar frutos do mar, vinhos do litoral e pores do sol.',
+    'story.nicoleRole': 'Gerente Regional de Varejo na Macro Food',
+    'story.nicoleLove': 'Product manager de profissão e Superhost no Airbnb há 7 anos, apaixonada por turismo e gastronomia.',
+    'story.topRole': 'Software Project Leader no Mercado Libre',
+    'story.topLove': 'Líder de projetos de tecnologia, apaixonado por turismo, gastronomia e pelos pores do sol do litoral.',
+    'story.linkedin': 'Ver perfil no LinkedIn',
     
     // Map
     'map.title': 'Guia Interativo do Litoral',
