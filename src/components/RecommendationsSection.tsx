@@ -2,40 +2,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { MessageCircle } from 'lucide-react';
-import sanadoraImage from '@/assets/experiencia-sanadora.jpg';
-import saboresImage from '@/assets/sabores-pacifico.jpg';
-import nerudaImage from '@/assets/tour-neruda.jpg';
-import vinasImage from '@/assets/vinas-litoral.jpg';
+import lunchImage from '@/assets/sabores-pacifico.jpg';
+import sunsetImage from '@/assets/hero-sunset.jpg';
+import comboImage from '@/assets/hosts-image.jpg';
 
 const experiences = [
-  {
-    titleKey: 'exp.sanadora',
-    descKey: 'exp.sanadoraDesc',
-    image: sanadoraImage,
-    duration: '3-4h',
-    price: 'USD 95',
-  },
-  {
-    titleKey: 'exp.sabores',
-    descKey: 'exp.saboresDesc',
-    image: saboresImage,
-    duration: '3-4h',
-    price: 'USD 80',
-  },
-  {
-    titleKey: 'exp.neruda',
-    descKey: 'exp.nerudaDesc',
-    image: nerudaImage,
-    duration: '4h',
-    price: 'USD 70',
-  },
-  {
-    titleKey: 'exp.vinas',
-    descKey: 'exp.vinasDesc',
-    image: vinasImage,
-    duration: '4-5h',
-    price: 'USD 95',
-  },
+  { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', image: lunchImage, duration: '13:00 – 16:00' },
+  { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', image: sunsetImage, duration: '19:30 – 21:30' },
+  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', image: comboImage, duration: '13:00 – 21:30', featured: true },
 ];
 
 const RecommendationsSection = () => {
@@ -51,11 +25,11 @@ const RecommendationsSection = () => {
           {t('exp.subtitle')}
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group"
+              className={`overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group flex flex-col ${exp.featured ? 'ring-2 ring-primary' : ''}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
@@ -65,20 +39,25 @@ const RecommendationsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                {exp.featured && (
+                  <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                    {t('exp.comboBadge')}
+                  </span>
+                )}
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   <span className="bg-white/90 text-foreground text-xs font-semibold px-2 py-1 rounded">
                     {exp.duration}
                   </span>
                   <span className="bg-primary/90 text-primary-foreground text-xs font-semibold px-2 py-1 rounded">
-                    {exp.price}
+                    {t('exp.price')}
                   </span>
                 </div>
               </div>
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-6 space-y-4 flex flex-col flex-1">
                 <h3 className="text-xl font-heading font-semibold text-foreground">
                   {t(exp.titleKey)}
                 </h3>
-                <p className="text-muted-foreground text-sm">{t(exp.descKey)}</p>
+                <p className="text-muted-foreground text-sm flex-1">{t(exp.descKey)}</p>
                 <Button
                   variant="outline"
                   size="sm"
