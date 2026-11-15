@@ -40,7 +40,7 @@ const StorySection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
               <img
                 src={hostsImage}
-                alt="Nicole y Top compartiendo vino al atardecer"
+                alt="Nicole y Top en la terraza frente al mar al atardecer"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
