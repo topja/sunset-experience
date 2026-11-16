@@ -16,11 +16,13 @@ import sunsetPareja from '@/assets/sunset-pareja.jpg';
 import comboImage from '@/assets/hosts-image.jpg';
 import comboParrilla from '@/assets/combo-parrilla.jpg';
 import comboCeviche from '@/assets/combo-ceviche.jpg';
+import nerudaNobel from '@/assets/neruda-nobel.jpg';
 
 const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchMesa, lunchSalmon, lunchBrindis, lunchImage], duration: '13:00 – 16:00' },
   { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetParrilla, sunsetMar, sunsetAmigos, sunsetPareja], duration: '16:00 – 20:30' },
   { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboCeviche, comboImage], duration: '13:00 – 20:30', featured: true },
+  { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel], duration: '≈ 4 h' },
 ];
 
 // Fotos de cada experiencia: para agregar más, súmalas al arreglo "images".
@@ -91,7 +93,7 @@ const RecommendationsSection = () => {
           {t('exp.subtitle')}
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {experiences.map((exp, index) => (
             <Card
               key={index}
