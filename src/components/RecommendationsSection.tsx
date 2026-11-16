@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
-import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Languages, MessageCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import lunchImage from '@/assets/almuerzo-amigos.jpg';
 import lunchMesa from '@/assets/almuerzo-mesa.jpg';
@@ -23,7 +23,7 @@ const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchMesa, lunchSalmon, lunchBrindis, lunchImage], duration: '13:00 – 16:00' },
   { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetParrilla, sunsetMar, sunsetAmigos, sunsetPareja], duration: '16:00 – 20:30' },
   { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboCeviche], duration: '13:00 – 20:30', featured: true },
-  { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel3, nerudaNobel, nerudaNobel2], duration: '≈ 4 h' },
+  { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel3, nerudaNobel, nerudaNobel2], duration: '≈ 4 h', langs: 'English / Español' },
 ];
 
 // Fotos de cada experiencia: para agregar más, súmalas al arreglo "images".
@@ -122,6 +122,12 @@ const RecommendationsSection = () => {
                 <h3 className="text-xl font-heading font-semibold text-foreground">
                   {t(exp.titleKey)}
                 </h3>
+                {exp.langs && (
+                  <p className="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
+                    <Languages className="w-3.5 h-3.5" />
+                    {exp.langs}
+                  </p>
+                )}
                 <p className="text-muted-foreground text-sm flex-1">{t(exp.descKey)}</p>
                 <Button
                   variant="outline"
