@@ -86,7 +86,7 @@ const RecommendationsSection = () => {
   const { t } = useLanguage();
   const openWhatsApp = (title: string) =>
     window.open(
-      `https://wa.me/56988315390?text=${encodeURIComponent(`${t('exp.waMsg')} "${title}" 🌅`)}`,
+      `https://wa.me/56991748857?text=${encodeURIComponent(`${t('exp.waMsg')} "${title}" 🌅`)}`,
       '_blank',
       'noopener',
     );

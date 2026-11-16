@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/56988315390?text=Hola%20Nicole%20y%20Top!%20Me%20interesa%20conocer%20más%20sobre%20Sunset%20Experience', '_blank');
+    window.open('https://wa.me/56991748857?text=Hola%20Nicole%20y%20Top!%20Me%20interesa%20conocer%20más%20sobre%20Sunset%20Experience', '_blank');
   };
 
   return (
