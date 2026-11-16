@@ -50,7 +50,7 @@ const ContactSection = () => {
                   className="w-full"
                   onClick={() => window.location.href = 'mailto:inversioneselatardecer@gmail.com'}
                 >
-                  Email
+                  <span className="truncate">inversioneselatardecer@gmail.com</span>
                 </Button>
               </CardContent>
             </Card>
