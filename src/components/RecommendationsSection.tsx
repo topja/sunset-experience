@@ -52,7 +52,7 @@ const PhotoCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
           <button
             type="button"
             aria-label="Foto anterior"
-            onClick={() => setI((i - 1 + n) % n)}
+            onClick={(e) => { e.stopPropagation(); setI((i - 1 + n) % n); }}
             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-1 hover:bg-white"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -60,7 +60,7 @@ const PhotoCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
           <button
             type="button"
             aria-label="Foto siguiente"
-            onClick={() => setI((i + 1) % n)}
+            onClick={(e) => { e.stopPropagation(); setI((i + 1) % n); }}
             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-1 hover:bg-white"
           >
             <ChevronRight className="w-4 h-4" />
@@ -71,7 +71,7 @@ const PhotoCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
                 key={k}
                 type="button"
                 aria-label={`Foto ${k + 1}`}
-                onClick={() => setI(k)}
+                onClick={(e) => { e.stopPropagation(); setI(k); }}
                 className={`h-2 rounded-full transition-all ${k === i ? 'w-4 bg-white' : 'w-2 bg-white/60'}`}
               />
             ))}
@@ -84,6 +84,12 @@ const PhotoCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
 
 const RecommendationsSection = () => {
   const { t } = useLanguage();
+  const openWhatsApp = (title: string) =>
+    window.open(
+      `https://wa.me/56988315390?text=${encodeURIComponent(`${t('exp.waMsg')} "${title}" 🌅`)}`,
+      '_blank',
+      'noopener',
+    );
 
   return (
     <section id="experiences" className="py-20 bg-background">
@@ -99,8 +105,12 @@ const RecommendationsSection = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className={`overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group flex flex-col ${exp.featured ? 'ring-2 ring-primary' : ''}`}
+              className={`overflow-hidden shadow-soft hover:shadow-lg transition-smooth animate-slide-up group flex flex-col cursor-pointer ${exp.featured ? 'ring-2 ring-primary' : ''}`}
               style={{ animationDelay: `${index * 100}ms` }}
+              role="link"
+              tabIndex={0}
+              onClick={() => openWhatsApp(t(exp.titleKey))}
+              onKeyDown={(e) => { if (e.key === 'Enter') openWhatsApp(t(exp.titleKey)); }}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <PhotoCarousel images={exp.images} alt={t(exp.titleKey)} />
@@ -113,9 +123,6 @@ const RecommendationsSection = () => {
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   <span className="bg-white/90 text-foreground text-xs font-semibold px-2 py-1 rounded">
                     {exp.duration}
-                  </span>
-                  <span className="bg-primary/90 text-primary-foreground text-xs font-semibold px-2 py-1 rounded">
-                    {t('exp.price')}
                   </span>
                 </div>
               </div>
@@ -134,7 +141,7 @@ const RecommendationsSection = () => {
                   variant="outline"
                   size="sm"
                   className="w-full"
-                  onClick={() => window.open('https://wa.me/56988315390?text=Hola! Me interesa conocer más sobre ' + t(exp.titleKey), '_blank')}
+                  tabIndex={-1}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {t('exp.bookNow')}
