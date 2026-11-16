@@ -69,8 +69,8 @@ const translations = {
     'exp.price': 'Consultar precio',
     'exp.bookNow': 'Reservar por WhatsApp',
     'exp.moreInfo': 'Más información sobre experiencias',
-    'video.title': 'Una tarde en nuestra casa',
-    'video.text': 'La mesa puesta en la terraza, la carne saliendo de la parrilla y el mar de fondo. Así se vive una tarde con nosotros en El Quisco.',
+    'video.title': 'Ven a pasar la tarde con nosotros',
+    'video.text': 'Ponemos la mesa en la terraza, prendemos la parrilla y dejamos que el mar haga el resto. Llegas como visita y te vas como amigo: así son las tardes en nuestra casa de El Quisco, y nos encantaría compartirlas contigo.',
     'video.soundOn': 'Activar música',
     'video.soundOff': 'Silenciar',
     
@@ -177,8 +177,8 @@ const translations = {
     'exp.price': 'Ask for price',
     'exp.bookNow': 'Book via WhatsApp',
     'exp.moreInfo': 'More information about experiences',
-    'video.title': 'An afternoon at our home',
-    'video.text': 'The table set on the terrace, meat fresh off the grill and the ocean in the background. This is an afternoon with us in El Quisco.',
+    'video.title': 'Come spend the afternoon with us',
+    'video.text': 'We set the table on the terrace, fire up the grill and let the ocean do the rest. You arrive as a guest and leave as a friend: that is what afternoons at our home in El Quisco feel like, and we would love to share them with you.',
     'video.soundOn': 'Turn on music',
     'video.soundOff': 'Mute',
     
@@ -298,8 +298,8 @@ const translations = {
     'exp.price': 'Consultar preço',
     'exp.bookNow': 'Reservar pelo WhatsApp',
     'exp.moreInfo': 'Mais informações sobre experiências',
-    'video.title': 'Uma tarde na nossa casa',
-    'video.text': 'A mesa posta no terraço, a carne saindo da churrasqueira e o mar ao fundo. Assim é uma tarde conosco em El Quisco.',
+    'video.title': 'Venha passar a tarde com a gente',
+    'video.text': 'Pomos a mesa no terraço, acendemos a churrasqueira e deixamos o mar fazer o resto. Você chega como visita e sai como amigo: assim são as tardes na nossa casa em El Quisco, e adoraríamos compartilhá-las com você.',
     'video.soundOn': 'Ativar música',
     'video.soundOff': 'Silenciar',
     
