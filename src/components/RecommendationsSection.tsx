@@ -13,7 +13,6 @@ import sunsetAmigos from '@/assets/sunset-amigos.jpg';
 import sunsetFamilia from '@/assets/sunset-familia.jpg';
 import sunsetParrilla from '@/assets/sunset-parrilla.jpg';
 import sunsetPareja from '@/assets/sunset-pareja.jpg';
-import comboImage from '@/assets/hosts-image.jpg';
 import comboParrilla from '@/assets/combo-parrilla.jpg';
 import comboCeviche from '@/assets/combo-ceviche.jpg';
 import nerudaNobel from '@/assets/neruda-nobel.jpg';
@@ -23,7 +22,7 @@ import nerudaNobel3 from '@/assets/neruda-nobel-3.jpg';
 const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchMesa, lunchSalmon, lunchBrindis, lunchImage], duration: '13:00 – 16:00' },
   { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetParrilla, sunsetMar, sunsetAmigos, sunsetPareja], duration: '16:00 – 20:30' },
-  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboCeviche, comboImage], duration: '13:00 – 20:30', featured: true },
+  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboCeviche], duration: '13:00 – 20:30', featured: true },
   { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel3, nerudaNobel, nerudaNobel2], duration: '≈ 4 h' },
 ];
 
