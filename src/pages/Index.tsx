@@ -1,8 +1,6 @@
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
 import StorySection from '@/components/StorySection';
-import MapSection from '@/components/MapSection';
 import RecommendationsSection from '@/components/RecommendationsSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import StaysSection from '@/components/StaysSection';
@@ -15,12 +13,10 @@ const Index = () => {
     <LanguageProvider>
       <div className="min-h-screen">
         <Navigation />
-        <HeroSection />
         <StorySection />
         <ReviewsSection />
         <RecommendationsSection />
         <StaysSection />
-        <MapSection />
         <ContactSection />
         <WhatsAppButton />
         <DiscountPopup />

@@ -29,7 +29,7 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <button
-              onClick={() => scrollToSection('guide')}
+              onClick={() => scrollToSection('experiences')}
               className="text-foreground hover:text-primary transition-smooth"
             >
               {t('nav.guide')}
@@ -90,7 +90,7 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
               <button
-                onClick={() => scrollToSection('guide')}
+                onClick={() => scrollToSection('experiences')}
                 className="text-foreground hover:text-primary transition-smooth text-left"
               >
                 {t('nav.guide')}

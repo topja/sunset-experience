@@ -25,7 +25,7 @@ const StorySection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section id="story" className="pt-28 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="order-2 md:order-1 space-y-6 animate-slide-up">

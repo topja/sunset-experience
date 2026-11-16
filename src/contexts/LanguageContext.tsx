@@ -11,7 +11,7 @@ interface LanguageContextType {
 const translations = {
   es: {
     // Navigation
-    'nav.guide': 'Guía del Litoral',
+    'nav.guide': 'Experiencias',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contacto',
     
@@ -113,7 +113,7 @@ const translations = {
   },
   en: {
     // Navigation
-    'nav.guide': 'Coastal Guide',
+    'nav.guide': 'Experiences',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contact',
     
@@ -228,7 +228,7 @@ const translations = {
   },
   pt: {
     // Navigation
-    'nav.guide': 'Guia do Litoral',
+    'nav.guide': 'Experiências',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contato',
     
