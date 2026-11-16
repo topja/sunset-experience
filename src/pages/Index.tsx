@@ -4,6 +4,7 @@ import StorySection from '@/components/StorySection';
 import RecommendationsSection from '@/components/RecommendationsSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import StaysSection from '@/components/StaysSection';
+import VideoSection from '@/components/VideoSection';
 import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import DiscountPopup from '@/components/DiscountPopup';
@@ -16,6 +17,7 @@ const Index = () => {
         <StorySection />
         <ReviewsSection />
         <RecommendationsSection />
+        <VideoSection />
         <StaysSection />
         <ContactSection />
         <WhatsAppButton />

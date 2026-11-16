@@ -67,6 +67,10 @@ const translations = {
     'exp.price': 'Consultar precio',
     'exp.bookNow': 'Reservar por WhatsApp',
     'exp.moreInfo': 'Más información sobre experiencias',
+    'video.title': 'Una tarde en nuestra casa',
+    'video.text': 'La mesa puesta en la terraza, la carne saliendo de la parrilla y el mar de fondo. Así se vive una tarde con nosotros en El Quisco.',
+    'video.soundOn': 'Activar música',
+    'video.soundOff': 'Silenciar',
     
     // Popup
     'popup.title': '¡Bienvenido a Sunset Experience! 🌅',
@@ -169,6 +173,10 @@ const translations = {
     'exp.price': 'Ask for price',
     'exp.bookNow': 'Book via WhatsApp',
     'exp.moreInfo': 'More information about experiences',
+    'video.title': 'An afternoon at our home',
+    'video.text': 'The table set on the terrace, meat fresh off the grill and the ocean in the background. This is an afternoon with us in El Quisco.',
+    'video.soundOn': 'Turn on music',
+    'video.soundOff': 'Mute',
     
     // Popup
     'popup.title': 'Welcome to Sunset Experience! 🌅',
@@ -284,6 +292,10 @@ const translations = {
     'exp.price': 'Consultar preço',
     'exp.bookNow': 'Reservar pelo WhatsApp',
     'exp.moreInfo': 'Mais informações sobre experiências',
+    'video.title': 'Uma tarde na nossa casa',
+    'video.text': 'A mesa posta no terraço, a carne saindo da churrasqueira e o mar ao fundo. Assim é uma tarde conosco em El Quisco.',
+    'video.soundOn': 'Ativar música',
+    'video.soundOff': 'Silenciar',
     
     // Popup
     'popup.title': 'Bem-vindo à Sunset Experience! 🌅',
