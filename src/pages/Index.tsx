@@ -7,7 +7,6 @@ import StaysSection from '@/components/StaysSection';
 import VideoSection from '@/components/VideoSection';
 import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import DiscountPopup from '@/components/DiscountPopup';
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
         <StaysSection />
         <ContactSection />
         <WhatsAppButton />
-        <DiscountPopup />
         
         {/* Footer */}
         <footer className="bg-foreground text-background py-8">
