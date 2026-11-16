@@ -46,16 +46,6 @@ const Navigation = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => setLanguage('es')}
-                className={`rounded-full h-8 px-3 ${
-                  language === 'es' ? 'bg-primary text-primary-foreground' : ''
-                }`}
-              >
-                ES
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
                 onClick={() => setLanguage('en')}
                 className={`rounded-full h-8 px-3 ${
                   language === 'en' ? 'bg-primary text-primary-foreground' : ''
@@ -72,6 +62,16 @@ const Navigation = () => {
                 }`}
               >
                 PT
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setLanguage('es')}
+                className={`rounded-full h-8 px-3 ${
+                  language === 'es' ? 'bg-primary text-primary-foreground' : ''
+                }`}
+              >
+                ES
               </Button>
             </div>
           </div>
@@ -108,14 +108,6 @@ const Navigation = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => setLanguage('es')}
-                    className={language === 'es' ? 'bg-primary text-primary-foreground' : ''}
-                  >
-                    ES
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
                     onClick={() => setLanguage('en')}
                     className={language === 'en' ? 'bg-primary text-primary-foreground' : ''}
                   >
@@ -128,6 +120,14 @@ const Navigation = () => {
                     className={language === 'pt' ? 'bg-primary text-primary-foreground' : ''}
                   >
                     PT
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setLanguage('es')}
+                    className={language === 'es' ? 'bg-primary text-primary-foreground' : ''}
+                  >
+                    ES
                   </Button>
                 </div>
               </div>

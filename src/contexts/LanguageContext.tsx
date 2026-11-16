@@ -364,14 +364,8 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  // Idioma inicial según el navegador del visitante: portugués → PT, español → ES, cualquier otro → EN.
-  const [language, setLanguage] = useState<Language>(() => {
-    const langs = typeof navigator !== 'undefined' ? navigator.languages || [navigator.language] : [];
-    const first = (langs[0] || 'es').toLowerCase();
-    if (first.startsWith('pt')) return 'pt';
-    if (first.startsWith('es')) return 'es';
-    return 'en';
-  });
+  // La página abre siempre en inglés (público principal: turistas extranjeros).
+  const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['es']] || key;
