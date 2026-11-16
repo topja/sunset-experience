@@ -14,7 +14,6 @@ const reviews = [
   { name: 'Luis Gerardo', cc: 'mx', from: 'Xalapa, México', date: 'abr. 2026', text: 'Nicole siempre muy atenta y pendiente de nosotros… Totalmente recomendable el sitio y los anfitriones.' },
   { name: 'Bárbara', cc: 'es', from: 'España', date: 'sep. 2025', text: 'Excelente alojamiento, Nicole preocupada, atenta y clara con las instrucciones. Muy buena la ubicación del departamento y la ubicación maravillosa, céntrica y cerca de todo.' },
   { name: 'Victoria', cc: 'cl', from: 'Chile', date: 'oct. 2024', text: 'Las fotos no le hacen justicia a la tremenda panorámica que se puede apreciar desde el balcón. Si deseas desconectarte, este es el lugar ideal.' },
-  { name: 'Karina', cc: 'cl', from: 'Iquique, Chile', date: 'ago. 2026', text: '¡Departamento maravilloso! Muy limpio, amplio, acogedor y con una vista espectacular. Destaco especialmente su hermosa y amplia terraza.' },
 ];
 
 const ReviewCard = ({ r }: { r: (typeof reviews)[number] }) => (
