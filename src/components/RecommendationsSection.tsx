@@ -18,12 +18,13 @@ import comboParrilla from '@/assets/combo-parrilla.jpg';
 import comboCeviche from '@/assets/combo-ceviche.jpg';
 import nerudaNobel from '@/assets/neruda-nobel.jpg';
 import nerudaNobel2 from '@/assets/neruda-nobel-2.jpg';
+import nerudaNobel3 from '@/assets/neruda-nobel-3.jpg';
 
 const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchMesa, lunchSalmon, lunchBrindis, lunchImage], duration: '13:00 – 16:00' },
   { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetParrilla, sunsetMar, sunsetAmigos, sunsetPareja], duration: '16:00 – 20:30' },
   { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboCeviche, comboImage], duration: '13:00 – 20:30', featured: true },
-  { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel, nerudaNobel2], duration: '≈ 4 h' },
+  { titleKey: 'exp.neruda2', descKey: 'exp.neruda2Desc', images: [nerudaNobel3, nerudaNobel, nerudaNobel2], duration: '≈ 4 h' },
 ];
 
 // Fotos de cada experiencia: para agregar más, súmalas al arreglo "images".
