@@ -48,7 +48,16 @@ const ContactSection = () => {
                 <Button
                   variant="outline"
                   className="w-full"
-                  onClick={() => window.location.href = 'mailto:inversioneselatardecer@gmail.com'}
+                  onClick={() => {
+                    const to = 'inversioneselatardecer@gmail.com';
+                    const subject = encodeURIComponent('Consulta Sunset Experience 🌅');
+                    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                    if (isMobile) {
+                      window.location.href = `mailto:${to}?subject=${subject}`;
+                    } else {
+                      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}`, '_blank', 'noopener');
+                    }
+                  }}
                 >
                   <span className="truncate">inversioneselatardecer@gmail.com</span>
                 </Button>
