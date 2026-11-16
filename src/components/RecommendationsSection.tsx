@@ -14,11 +14,12 @@ import sunsetFamilia from '@/assets/sunset-familia.jpg';
 import sunsetParrilla from '@/assets/sunset-parrilla.jpg';
 import sunsetPareja from '@/assets/sunset-pareja.jpg';
 import comboImage from '@/assets/hosts-image.jpg';
+import comboParrilla from '@/assets/combo-parrilla.jpg';
 
 const experiences = [
   { titleKey: 'exp.lunch', descKey: 'exp.lunchDesc', images: [lunchMesa, lunchSalmon, lunchBrindis, lunchImage], duration: '13:00 – 16:00' },
   { titleKey: 'exp.sundowner', descKey: 'exp.sundownerDesc', images: [sunsetTerraza, sunsetFamilia, sunsetParrilla, sunsetMar, sunsetAmigos, sunsetPareja], duration: '19:30 – 21:30' },
-  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboImage], duration: '13:00 – 21:30', featured: true },
+  { titleKey: 'exp.combo', descKey: 'exp.comboDesc', images: [comboParrilla, comboImage], duration: '13:00 – 21:30', featured: true },
 ];
 
 // Fotos de cada experiencia: para agregar más, súmalas al arreglo "images".
