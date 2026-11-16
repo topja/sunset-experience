@@ -30,7 +30,7 @@ const VideoSection = () => {
           <div className="relative mx-auto w-full max-w-xs rounded-2xl overflow-hidden shadow-soft">
             <video
               ref={ref}
-              src={`${base}video/tarde-en-casa.mp4`}
+              src={`${base}video/tarde-en-casa.mp4?v=2`}
               poster={`${base}video/poster.jpg`}
               autoPlay
               muted
