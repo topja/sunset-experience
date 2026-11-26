@@ -14,6 +14,11 @@ const translations = {
     'nav.guide': 'Experiencias',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contacto',
+    'nav.coast': 'Guía del Litoral',
+    'guide.title': 'Guía del Litoral de los Poetas',
+    'guide.subtitle': 'Nuestros lugares favoritos de Algarrobo a Cartagena, probados por nosotros y recomendados a cientos de huéspedes.',
+    'guide.fav': 'Imperdible',
+    'guide.map': 'Ver en el mapa',
     
     // Hero
     'hero.title': 'Bienvenido a Sunset Experience',
@@ -122,6 +127,11 @@ const translations = {
     'nav.guide': 'Experiences',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contact',
+    'nav.coast': 'Coast Guide',
+    'guide.title': 'Our Guide to the Poets’ Coast',
+    'guide.subtitle': 'Our favourite places from Algarrobo to Cartagena, tried by us and recommended to hundreds of guests.',
+    'guide.fav': 'Must-see',
+    'guide.map': 'View on map',
     
     // Hero
     'hero.title': 'Welcome to Sunset Experience',
@@ -243,6 +253,11 @@ const translations = {
     'nav.guide': 'Experiências',
     'nav.friends': 'Sunset Friends',
     'nav.contact': 'Contato',
+    'nav.coast': 'Guia do Litoral',
+    'guide.title': 'Guia do Litoral dos Poetas',
+    'guide.subtitle': 'Nossos lugares favoritos de Algarrobo a Cartagena, testados por nós e recomendados a centenas de hóspedes.',
+    'guide.fav': 'Imperdível',
+    'guide.map': 'Ver no mapa',
     
     // Hero
     'hero.title': 'Bem-vindo à Sunset Experience',
